@@ -1,0 +1,122 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Func",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#types"
+        },
+        {
+            "include": "#stdlib-functions"
+        },
+        {
+            "include": "#stdlib-types"
+        },
+        {
+            "include": "#stdlib-constants"
+        },
+        {
+            "include": "#names"
+        },
+        {
+            "include": "#operators"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.func",
+                    "match": "//[^\\n]*"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.func",
+                    "match": "\\b(func|struct|var|do|if|while|return|break|continue|sizeof|type)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "name": "string.quoted.double.func",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.func",
+                    "match": "\\\\."
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.func",
+                    "match": "\\b\\d+(\\\\.\\d+)?\\b"
+                }
+            ]
+        },
+        "types": {
+            "patterns": [
+                {
+                    "name": "entity.name.type.func",
+                    "match": "\\b(void|int|char|short|long|signed|unsigned|float|double)\\b\\**"
+                }
+            ]
+        },
+        "stdlib-functions": {
+            "patterns": [
+                {
+                    "name": "support.function.func",
+                    "match": "\\b(printf|fprintf|puts|exit|fopen|fclose|malloc|calloc|realloc|free|strlen|strcpy|strcmp|memcpy)\\b"
+                }
+            ]
+        },
+        "stdlib-types": {
+            "patterns": [
+                {
+                    "name": "support.type.func",
+                    "match": "\\b(size_t|int8_t|uint8_t|int16_t|uint16_t|int32_t|uint32_t|int64_t|uint64_t|bool)\\b|\\bFILE\\*"
+                }
+            ]
+        },
+        "stdlib-constants": {
+            "patterns": [
+                {
+                    "name": "support.constant.func",
+                    "match": "\\b(NULL|true|false)\\b"
+                }
+            ]
+        },
+        "names": {
+            "patterns": [
+                {
+                    "name": "entity.name.function.func",
+                    "match": "\\b[_a-zA-Z]\\w*\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.func",
+                    "match": "=|==|!=|\\+|\\-|\\*|/|%|&|\\||<|>|\\$|\\."
+                }
+            ]
+        }
+    },
+    "scopeName": "source.func"
+}

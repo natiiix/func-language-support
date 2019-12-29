@@ -1,0 +1,37 @@
+{
+    "name": "func-language-support",
+    "displayName": "FunC Language Support",
+    "description": "Extension that adds support for the FunC programming language",
+    "version": "0.0.1",
+    "publisher": "natiiix",
+    "repository": "https://github.com/natiiix/func-language-support",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "FunC",
+                "aliases": [
+                    "FunC",
+                    "Func",
+                    "func"
+                ],
+                "extensions": [
+                    ".func"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "FunC",
+                "scopeName": "source.func",
+                "path": "./syntaxes/func.tmLanguage.json"
+            }
+        ]
+    }
+}
