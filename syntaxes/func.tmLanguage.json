@@ -89,7 +89,7 @@
             "patterns": [
                 {
                     "name": "entity.name.type.func",
-                    "match": "\\b(void|int|char|short|long|signed|unsigned|float|double)\\b\\**"
+                    "match": "\\b(void|int|char|short|long|signed|unsigned|float|double)\\b(\\s+\\bconst\\b)?(\\*(\\s+\\bconst\\b)?)*"
                 }
             ]
         },
