@@ -2,7 +2,7 @@
     "name": "func-language-support",
     "displayName": "FunC Language Support",
     "description": "Extension that adds support for the FunC programming language",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "publisher": "natiiix",
     "repository": "https://github.com/natiiix/func-language-support",
     "engines": {
