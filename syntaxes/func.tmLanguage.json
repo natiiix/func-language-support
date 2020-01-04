@@ -89,7 +89,7 @@
             "patterns": [
                 {
                     "name": "entity.name.type.func",
-                    "match": "\\b(void|int|char|short|long|signed|unsigned|float|double)\\b(\\s+\\bconst\\b)?(\\*(\\s+\\bconst\\b)?)*"
+                    "match": "((\\bconst\\s*)?\\*\\s*)*(\\bconst\\s+)?\\b(void|int|char|short|long|signed|unsigned|float|double)\\b"
                 }
             ]
         },
@@ -105,7 +105,7 @@
             "patterns": [
                 {
                     "name": "support.type.func",
-                    "match": "\\b(size_t|int8_t|uint8_t|int16_t|uint16_t|int32_t|uint32_t|int64_t|uint64_t|bool)\\b|\\bFILE\\*"
+                    "match": "\\b(size_t|int8_t|uint8_t|int16_t|uint16_t|int32_t|uint32_t|int64_t|uint64_t|bool)\\b|\\*FILE\\b"
                 }
             ]
         },
